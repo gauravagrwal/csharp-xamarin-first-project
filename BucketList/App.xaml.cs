@@ -1,8 +1,5 @@
-﻿using System;
+﻿using BucketList.Services;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using BucketList.Services;
-using BucketList.Views;
 
 namespace BucketList
 {
@@ -14,7 +11,7 @@ namespace BucketList
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new MainPage();
+            MainPage = new AppShell();
         }
 
         protected override void OnStart()
